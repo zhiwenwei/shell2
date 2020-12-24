@@ -77,7 +77,7 @@ firewall-cmd --list-all
 }
 
 setup_opendkim() {
-wget http://mirrors.aliyun.com/repo/epel-7.repo -P /etc/yum.repos.d/ > /dev/null && yum install -y  opendkim --enablerepo=epel > /devnull || echo  "install opendkim failed."
+wget http://mirrors.aliyun.com/repo/epel-7.repo -P /etc/yum.repos.d/ > /dev/null && yum install -y  opendkim --enablerepo=epel > /dev/null || echo  "install opendkim failed."
 echo "AutoRestart             Yes
 AutoRestartRate         10/1h
 LogWhy                  Yes
