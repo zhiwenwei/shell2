@@ -10,11 +10,14 @@ echo -e "{
  \"local_address\":\"127.0.0.1\",  
  \"local_port\":1080,  
  \"port_password\": {  
-     \"9994\": \"WWW.163.com\"
+     \"9990\": \"WWW.163.com\"
  },  
  \"timeout\":600,  
  \"method\":\"rc4-md5\",  
  \"fast_open\": false 
 }" > /etc/shadowsocks.json
+ssserver -c /etc/shadowsocks.json -d start
+echo "ssserver -c /etc/shadowsocks.json -d start" >> /etc/rc.d/rc.local
+systemctl stop firewalld && systemctl disable firewalld
 ssserver -c /etc/shadowsocks.json -d start
 echo "ssserver -c /etc/shadowsocks.json -d start" >> /etc/rc.d/rc.local
