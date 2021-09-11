@@ -44,7 +44,7 @@ systemctl enable postfix
 setup_cyrus-sasl() {
 yum -y install cyrus-sasl* > /dev/null
 Password=`echo $domain | tr a-z A-Z`@`date +%Y`
-for i in {1..10};do
+for i in {1..6};do
 UserName=ken-`openssl rand -hex 1`
 /usr/bin/id -u UserName 1>/dev/null
 if [ $? = 0 ];then
