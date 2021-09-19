@@ -135,7 +135,7 @@ tail -n 10 /var/log/maillog|grep 'OK'
 EOF
 
 setup_postfix
-#setup_opendkim
+setup_opendkim
 setup_ssh
 setup_selinux
 setup_firewalld
