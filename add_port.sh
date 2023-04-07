@@ -12,3 +12,4 @@ echo -e "smtp2           ${port}/tcp          mail2\nsmtp2            ${port}/ud
 firewall-cmd --permanent --add-port=${port}/tcp && firewall-cmd --reload
 systemctl restart postfix
 ss -anltp
+# test
